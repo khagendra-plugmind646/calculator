@@ -14,6 +14,9 @@ function delete_value() {
 
 function calculate() {
     try {
+        
+        display.value=eval(display.value);
+
         var equation = display.value;
         var result = eval(equation);
 
