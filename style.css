@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 95%);
+    background-image:url(" backpic1.jpg");
+}
+#calculator-container{
+    display: flex;
+    justify-content: space-between;
+}
+#calculator {
+    flex: 1;
+    font-family: Arial, sans-serif;
+    background-color: hsl(0, 0%, 15%);
+    border-radius: 40px 0px 0px 40px;
+    max-width: 500px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.calculator-header {
+    position: relative;
+}
+
+#historyButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height:60px;
+    width:60px;
+    cursor: pointer;
+    background-color: hsl(0, 92%, 53%);
+    color: white;
+    padding: 0px;
+    border-radius: 0 0 0 15px;
+    transition: right 0.3s ease, background-color 0.3s ease;
+}
+
+#historyButton:hover {
+    background-color: hsl(0, 0%, 50%);
+}
+
+/*.history {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    height: 100%;
+    width: 200px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: rgb(4, 14, 14);
+    transition: right 0.3s ease;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+*/
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: clamp(2rem, 5vw, 5rem);
+    text-align: left;
+    border: none;
+    background-color: hsl(0, 3%, 29%);
+    color: white;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: pre-line;
+    max-height: 200px; /* Adjust this value based on the maximum height you want for the display */
+    overflow-y: auto;
+}
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    border: none;
+    background-color: hsl(0, 0%, 30%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.history:active{
+    display: block;
+}
+button:hover {
+    background-color: hsl(0, 0%, 50%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+    transform: translateY(-2px);
+}
+
+.operator-btn {
+    background-color: hsl(115, 100%, 55%);
+}
+
+.operator-btn1 {
+    background-color: hsl(0, 100%, 55%);
+}
+
+.operator-btn1:hover {
+    background-color: hsl(54, 100%, 55%);
+}
+
+.operator-btn:hover {
+    background-color: hsl(36, 68%, 71%);
+}
+
+.operator-btn:active {
+    background-color: hsl(36, 100%, 70%);
+}
+.history-tab {
+    flex-shrink: 0;
+    display: none;
+    position: fixed;
+    top: 108px;
+    bottom: 9px;
+    left: 1097px;
+    height: 77.2%;
+    width: 320px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    background-color: hsl(0, 0%, 15%);
+    transition: right 0.3s ease;
+    border-left: 2px solid hsl(0, 0%, 30%);
+    padding: 10px;
+    color: rgb(243, 240, 240);
+}
+
+
+.history-tab.active {
+    right: 0;
+    display: block;
+}
